@@ -21,7 +21,9 @@ export default {
   },
   async mounted() {
     // let url = process.env.URL || "localhost:4000";
-    const data = await axios.get(`backend/users`);
+    const data = await axios.get(
+      `http://back-end-drijal-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/users`
+    );
     this.data = data.data;
   },
 };
