@@ -22,7 +22,7 @@ export default {
   async mounted() {
     // let url = process.env.URL || "localhost:4000";
     const data = await axios.get(
-      `http://back-end-drijal-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/users`
+      `http://back-end-1-drijal-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/users`
     );
     this.data = data.data;
   },
