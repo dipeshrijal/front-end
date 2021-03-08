@@ -9,7 +9,7 @@ RUN npm run build
 # production stage
 ENV NODE_ENV=production
 
-FROM nginx:stable-alpine as production-stage
+FROM nginxinc/nginx-unprivileged  as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 RUN chgrp -R root /var/cache/nginx /var/run /var/log/nginx && \
